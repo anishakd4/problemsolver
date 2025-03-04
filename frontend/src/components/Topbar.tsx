@@ -38,7 +38,7 @@ function NavBar() {
   return (
     <div className="flex mt-4">
       {topbarItems.map((item) => (
-        <NavbarItem route={item.route} title={item.title} />
+        <NavbarItem route={item.route} title={item.title} key={item.route} />
       ))}
     </div>
   );
