@@ -12,9 +12,10 @@ export type Submission = {
 
 export const globalSubmissions = atom(async (get) => {
   const response = await axios.get(
-    "https://getsubmissions-jpzo5bevwq-uc.a.run.app"
+    "https://getsubmissions-jql22nphfa-uc.a.run.app"
   );
-  return response.data.response.map((x: any) => ({
+  console.log({ response });
+  const m = response.data.response.map((x: any) => ({
     language: x.submission.language,
     timestamp: x.submission.submitTime._nanoseconds,
     submission: x.submission.submission,
@@ -22,4 +23,7 @@ export const globalSubmissions = atom(async (get) => {
     problemId: x.submission.problemId,
     username: x.user.username,
   }));
+
+  console.log({ m });
+  return m;
 });
