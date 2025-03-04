@@ -10,7 +10,7 @@ export const Topbar = () => {
         height="100"
         style={{ float: "left" }}
       />
-      <div className="text-8xl text-white">Daily Code</div>
+      <div className="text-8xl text-white">Problem Solver</div>
       <NavBar />
     </div>
   );
@@ -22,7 +22,7 @@ const topbarItems = [
     route: "/about",
   },
   {
-    title: "Acitivity",
+    title: "Activity",
     route: "/activity",
   },
   {

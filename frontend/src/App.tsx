@@ -19,6 +19,10 @@ function App() {
 function StoreApp() {
   const [user, setUser] = useAtom(userAtom);
 
+  // useEffect(() => {
+  //   auth.signOut();
+  // });
+
   const problemList = [
     { id: "1", problemName: "Two Sum", tags: ["Array", "Hash Table"] },
     { id: "2", problemName: "Reverse String", tags: ["String"] },
